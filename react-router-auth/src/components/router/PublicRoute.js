@@ -1,6 +1,6 @@
-import {useAuthContext} from 'contexts/useAuthContext'
-import {PRIVATE, LOGIN} from 'config/router/paths'
-import {Navigate} from 'react-router'
+import {useAuthContext} from '../../contexts/authContext'
+import {PRIVATE, LOGIN, LOGOUT} from '../../config/router/paths'
+import {Navigate, Outlet} from 'react-router'
 import {Link} from 'react-router-dom'
 
 export default function PublicRoute(){
@@ -15,7 +15,7 @@ export default function PublicRoute(){
     <div>
       <nav>
         <ul>
-          <li><Link to={LOGIN}>Inicio</Link></li>
+          <li><Link to={LOGOUT}>Inicio</Link></li>
         </ul>
       </nav>
       <Outlet />
